@@ -319,10 +319,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d9c6d3019bba5476bd265d0ea6a9a0d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefab: {fileID: 1279657704594393787, guid: 4eaa8b9ed34a6b0508d97a7517c17746, type: 3}
+  prefabRed: {fileID: 2065652411395771461, guid: 46fe850be1e87a3479a9ae1b8ce521e2, type: 3}
   spawnPoint: {fileID: 1244492442}
   breedMenu: {fileID: 850706491}
-  commonCats: []
+  commonCats:
+  - {fileID: 1279657704594393787, guid: 4eaa8b9ed34a6b0508d97a7517c17746, type: 3}
+  - {fileID: 2065652411395771461, guid: 46fe850be1e87a3479a9ae1b8ce521e2, type: 3}
   rareCats: []
   legendaryCats: []
   catIntRed: 0
