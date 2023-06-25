@@ -1,27 +1,34 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Animations;
 
 public class Movement : MonoBehaviour
 {
     [SerializeField] Rigidbody2D rg;
+    [SerializeField] Transform transform;
+    [SerializeField] PositionConstraint positionConstraint;
+
     // Start is called before the first frame update
     void Start()
     {
-        float RandomX = Random.Range(0, 1);
-        float RandomY = Random.Range(0, 1);
-        Rigidbody2D rg = GetComponent<Rigidbody2D>();
-        
+        Resolution currentResoultion = Screen.currentResoultion;
+        rg = GetComponent<Rigidbody2D>();
+        positionConstraint.translationOffset = Screen.currentResoultion;
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        int TickCheckWalk = Random.Range(0, 100);
+        int TickCheckWalk = Random.Range(0, 10000);
+        float RandomX = Random.Range(-50f, 50f);
+        float RandomY = Random.Range(-50f, 50f);
 
-        if (TickCheckWalk == 10){
+        if (TickCheckWalk == 1){
 
-            Rigidbody2D  rg = new Vector2D(RandomX * Time.deltaTime, RandomY * Time.deltaTime, 0);
+            Vector2 randomVector = new Vector2(RandomX*Time.deltaTime, RandomY*Time.deltaTime);
+            rg.velocity = randomVector;
         }
 
         

@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5309357236915100961}
   - component: {fileID: 7010371053577240763}
   - component: {fileID: 1492707334688243339}
+  - component: {fileID: -2453660175739470190}
   m_Layer: 0
   m_Name: CatPink
   m_TagString: Untagged
@@ -106,3 +107,16 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &-2453660175739470190
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3319877578642603050}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0aa51362453534c599b3a9e2edef96ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rg: {fileID: 1492707334688243339}
