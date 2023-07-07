@@ -1,0 +1,89 @@
+using UnityEngine;
+using System.IO;
+
+public class DataManager : MonoBehaviour
+{
+    private static DataManager instance;
+
+    private string saveFilePath = "save.txt";
+    private SavableData data;
+
+    public static DataManager Instance
+    {
+        get
+        {
+            if (instance == null)
+            {
+                instance = FindObjectOfType<DataManager>();
+
+                if (instance == null)
+                {
+                    GameObject singletonObject = new GameObject();
+                    instance = singletonObject.AddComponent<DataManager>();
+                    singletonObject.name = typeof(DataManager).ToString() + " (Singleton)";
+                    DontDestroyOnLoad(singletonObject);
+                }
+            }
+
+            return instance;
+        }
+    }
+
+    private void Start()
+    {
+        // Load the saved data from the file
+        LoadData();
+    }
+
+    private void Update()
+    {
+        // Simulate data update
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            data.PlayerScore++;
+            Debug.Log("Score: " + data.PlayerScore);
+        }
+
+        // Save the data when 'S' key is pressed
+        if (Input.GetKeyDown(KeyCode.S))
+        {
+            SaveData();
+            Debug.Log("Data saved!");
+        }
+    }
+
+    private void SaveData()
+    {
+        // Convert the data to a JSON string
+        string jsonData = JsonUtility.ToJson(data);
+
+        // Write the JSON string to the save file
+        File.WriteAllText(saveFilePath, jsonData);
+    }
+
+    private void LoadData()
+    {
+        if (File.Exists(saveFilePath))
+        {
+            // Read the JSON string from the save file
+            string jsonData = File.ReadAllText(saveFilePath);
+
+            // Convert the JSON string back to data object
+            data = JsonUtility.FromJson<SavableData>(jsonData);
+
+            Debug.Log("Loaded Data: " + data.PlayerScore);
+        }
+        else
+        {
+            // Create a new instance of data if no save file exists
+            data = new SavableData();
+            Debug.Log("No saved data found. Starting with default values.");
+        }
+    }
+}
+
+[System.Serializable]
+public class SavableData
+{
+    public int PlayerScore;
+}

@@ -14,7 +14,7 @@ public class Buttons : MonoBehaviour
 
     void Start()
     {
-	    dataHandler = DataHandler.instance;
+	    dataHandler = DataHandler.Instance;
     }
     
     
