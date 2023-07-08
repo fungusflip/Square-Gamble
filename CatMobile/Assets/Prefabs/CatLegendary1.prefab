@@ -123,7 +123,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rg: {fileID: 1492707334688243339}
   myTransform: {fileID: 5309357236915100961}
-  movementSpeed: 100
+  movementSpeed: 50
   walkProbability: 0.01
 --- !u!114 &3077594018115070872
 MonoBehaviour:

@@ -5,6 +5,6 @@ public class LoadAndSave : MonoBehaviour
 {
 	public void SaveData()
 	{
-	
 
 	}
+}

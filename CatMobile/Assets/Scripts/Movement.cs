@@ -6,9 +6,9 @@ public class Movement : MonoBehaviour
     [SerializeField] Transform myTransform;
     Camera mainCamera;
     Vector2 screenBounds;
+    [SerializeField] float movementSpeed = 1000f;
 
-    [SerializeField] float movementSpeed = 100f;
-    [SerializeField] float walkProbability = 0.01f;
+    [SerializeField] float walkProbability = 0.0001f;
 
     void Start()
     {
@@ -19,19 +19,14 @@ public class Movement : MonoBehaviour
 
     void Update()
     {
-        if (ShouldWalk())
-        {
-            Vector2 randomDirection = Random.insideUnitCircle.normalized;
-            Vector2 velocity = randomDirection * movementSpeed * Time.deltaTime;
-            rg.velocity = velocity;
-        }
-
         ClampPosition();
-    }
 
-    bool ShouldWalk()
-    {
-        return Random.value < walkProbability;
+	if (Random.value < walkProbability){
+
+        Vector2 randomDirection = Random.insideUnitCircle.normalized;
+        Vector2 velocity = randomDirection * movementSpeed * Time.deltaTime;
+        rg.velocity = velocity;
+	}
     }
 
     void ClampPosition()
@@ -47,8 +42,8 @@ public class Movement : MonoBehaviour
         float orthographicHeight = mainCamera.orthographicSize;
         float orthographicWidth = orthographicHeight * mainCamera.aspect;
 
-        float maxScreenX = orthographicWidth - myTransform.localScale.x / 2f;
-        float maxScreenY = orthographicHeight - myTransform.localScale.y / 2f;
+        float maxScreenX = orthographicWidth - (myTransform.localScale.x / 2f);
+        float maxScreenY = orthographicHeight - (myTransform.localScale.y / 2f);
 
         return new Vector2(maxScreenX, maxScreenY);
     }

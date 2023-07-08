@@ -14,7 +14,7 @@ public class Buttons : MonoBehaviour
 
     void Start()
     {
-	    dataHandler = DataHandler.Instance;
+	    DataHandler = DataHandler.Instance;
     }
     
     
@@ -38,7 +38,7 @@ public class Buttons : MonoBehaviour
        if (randomChance > 0.0f && randomChance < 0.5f)
        {
          GameObject spawnedCat = Instantiate(objectRandomCommon, spawnPoint.position, spawnPoint.rotation);
-         dataHandler.CommonCats++;
+         DataHandler.Instance.CommonCats++;
         
         }
 
@@ -46,14 +46,14 @@ public class Buttons : MonoBehaviour
         if (randomChance > 0.5f && randomChance < 0.8f)
       {
         GameObject spawnedCat = Instantiate(objectRandomRare, spawnPoint.position, spawnPoint.rotation);
-        dataHandler.RareCats++;
+        DataHandler.Instance.RareCats++;
       }
         
         if (randomChance > 0.8f && randomChance < 0.9f)
       {
         GameObject spawnedCat = Instantiate(objectRandomlegendary, spawnPoint.position, spawnPoint.rotation);
-        dataHandler.LegendaryCats++;
-	Debug.Log(dataHandler.LegendaryCats);
+        DataHandler.Instance.LegendaryCats++;
+	Debug.Log(DataHandler.Instance.LegendaryCats);
       }
        
     }

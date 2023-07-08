@@ -4,37 +4,46 @@ using UnityEngine;
 
 public class Drag : MonoBehaviour
 {
-	private bool isDragging = false;
-	private Vector3 offset;
-    // Start is called before the first frame update
+    private bool isDragging = false;
+    private Vector3 offset;
+    [SerializeField] GameObject Common;
+
     void OnMouseDown()
     {
         isDragging = true;
-	offset = gameObject.transform.position - GetMouseWorldPosition();
+        offset = gameObject.transform.position - GetMouseWorldPosition();
     }
 
     void OnMouseUp()
     {
-	    isDragging = false;
-    
+        isDragging = false;
     }
 
-    // Update is called once per frame
-    //
     void Update()
     {
-	    if (isDragging)
-	    {
-		    Vector3 mousePos = GetMouseWorldPosition();
-		    transform.position = mousePos + offset;
-	    }
-        
+        if (isDragging)
+        {
+            Vector3 mousePos = GetMouseWorldPosition();
+            transform.position = mousePos + offset;
+        }
+        Debug.Log(isDragging);
     }
 
     Vector3 GetMouseWorldPosition()
     {
-	    Vector3 mousePosition = Input.mousePosition;
-	    mousePosition.z = -Camera.main.transform.position.z;
-	    return Camera.main.ScreenToWorldPoint(mousePosition);
+        Vector3 mousePosition = Input.mousePosition;
+        mousePosition.z = -Camera.main.transform.position.z;
+        return Camera.main.ScreenToWorldPoint(mousePosition);
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        GameObject otherObject = collision.gameObject;
+
+        if (gameObject.CompareTag("Common") && otherObject.CompareTag("Common"))
+        {
+            
+        }
     }
 }
+

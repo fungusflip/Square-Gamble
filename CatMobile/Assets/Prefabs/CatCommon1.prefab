@@ -123,6 +123,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rg: {fileID: 754238084129191820}
   myTransform: {fileID: 1501994765165284315}
+  movementSpeed: 50
+  walkProbability: 0.01
 --- !u!114 &758753445390548460
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -135,6 +137,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bfc8957fb07d4524db3267dd112ef0d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Common: {fileID: 0}
 --- !u!58 &-5468472499896968878
 CircleCollider2D:
   m_ObjectHideFlags: 0
