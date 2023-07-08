@@ -10,13 +10,13 @@ GameObject:
   m_Component:
   - component: {fileID: 1501994765165284315}
   - component: {fileID: 4147933975605155370}
-  - component: {fileID: 754238084129191820}
   - component: {fileID: 4642056045673694811}
   - component: {fileID: 758753445390548460}
-  - component: {fileID: -5468472499896968878}
+  - component: {fileID: 7224229152766296046}
+  - component: {fileID: 1434824718315240919}
   m_Layer: 0
   m_Name: CatCommon1
-  m_TagString: Untagged
+  m_TagString: Common
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -88,27 +88,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!50 &754238084129191820
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2065652411395771461}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 0
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
 --- !u!114 &4642056045673694811
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -121,7 +100,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0aa51362453534c599b3a9e2edef96ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rg: {fileID: 754238084129191820}
+  rg: {fileID: 0}
   myTransform: {fileID: 1501994765165284315}
   movementSpeed: 50
   walkProbability: 0.01
@@ -137,8 +116,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bfc8957fb07d4524db3267dd112ef0d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Common: {fileID: 0}
---- !u!58 &-5468472499896968878
+  Rare: {fileID: 1279657704594393787, guid: 4eaa8b9ed34a6b0508d97a7517c17746, type: 3}
+--- !u!50 &7224229152766296046
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2065652411395771461}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!58 &1434824718315240919
 CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -148,7 +148,7 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}

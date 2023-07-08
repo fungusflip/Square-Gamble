@@ -6,8 +6,8 @@ public class Drag : MonoBehaviour
 {
     private bool isDragging = false;
     private Vector3 offset;
-    [SerializeField] GameObject Common;
-
+    [SerializeField] GameObject Rare;
+    
     void OnMouseDown()
     {
         isDragging = true;
@@ -36,14 +36,16 @@ public class Drag : MonoBehaviour
         return Camera.main.ScreenToWorldPoint(mousePosition);
     }
 
-    private void OnCollisionEnter(Collision collision)
+    private void OntriggerEnter2D(Collider2D other)
     {
-        GameObject otherObject = collision.gameObject;
+        Debug.Log("Something Happened");
+        GameObject otherObject = other.gameObject;
 
         if (gameObject.CompareTag("Common") && otherObject.CompareTag("Common"))
         {
-            
+            GameObject instantiatedCommon = Instantiate(Rare, otherObject.transform.position, Quaternion.identity);
+            // Additional code to modify or interact with the instantiated object "instantiatedCommon"
         }
     }
-}
 
+}
