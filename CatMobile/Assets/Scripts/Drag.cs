@@ -17,6 +17,8 @@ public class Drag : MonoBehaviour
     void OnMouseUp()
     {
         isDragging = false;
+
+	
     }
 
     void Update()
@@ -35,17 +37,4 @@ public class Drag : MonoBehaviour
         mousePosition.z = -Camera.main.transform.position.z;
         return Camera.main.ScreenToWorldPoint(mousePosition);
     }
-
-    private void OntriggerEnter2D(Collider2D other)
-    {
-        Debug.Log("Something Happened");
-        GameObject otherObject = other.gameObject;
-
-        if (gameObject.CompareTag("Common") && otherObject.CompareTag("Common"))
-        {
-            GameObject instantiatedCommon = Instantiate(Rare, otherObject.transform.position, Quaternion.identity);
-            // Additional code to modify or interact with the instantiated object "instantiatedCommon"
-        }
-    }
-
 }
