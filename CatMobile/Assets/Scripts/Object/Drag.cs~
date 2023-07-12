@@ -19,7 +19,7 @@ public class Drag : MonoBehaviour
     public IEnumerator DroppedRoutine()
     {
 	    dropped = true;
-	    yield return new WaitForSeconds(0.1f);
+	    yield return new WaitForSeconds(1f);
 	    dropped = false;
     }
 

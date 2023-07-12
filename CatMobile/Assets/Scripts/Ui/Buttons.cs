@@ -8,7 +8,6 @@ public class Buttons : MonoBehaviour
     [SerializeField] private Transform spawnPoint; // Position for CatSpawning
     [SerializeField] private GameObject breedMenu;  // BreedMenu
     [SerializeField] private GameObject shopItemIllegal;
-    [SerializeField] private GameObject Button;
     [SerializeField] private List<GameObject> commonCats;
     [SerializeField] private List<GameObject> rareCats;
     [SerializeField] private List<GameObject> legendaryCats;

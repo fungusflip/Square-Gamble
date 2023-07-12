@@ -1,0 +1,22 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class IllegalCatHous : MonoBehaviour
+{
+	[SerializeField] BoxCollider2D collider;
+
+    // Start is called before the first frame update
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+	   Drag otherObject = other.GetComponent<Drag>();
+	   if (otherObject.dropped == true && other.gameObject.CompareTag("Common"))
+	   {
+		   Debug.Log("IT WORKED");
+
+
+	   }
+		  
+
+    }
+}
