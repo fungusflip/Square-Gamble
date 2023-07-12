@@ -20,14 +20,13 @@ public class CashMoney : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+	    StartCoroutine(GoldIncrease());
 	    textMeshPro.SetText("Cash " + DataHandler.Instance.Cash);
 	    
     }
     
     void update()
     {
-
-	    StartCoroutine(GoldIncrease());
 	    Debug.Log(GoldIncome);
    
     }

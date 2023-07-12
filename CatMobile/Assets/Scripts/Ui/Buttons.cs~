@@ -7,19 +7,12 @@ public class Buttons : MonoBehaviour
     [SerializeField] private GameObject prefabRed; // Right now what cat spawns
     [SerializeField] private Transform spawnPoint; // Position for CatSpawning
     [SerializeField] private GameObject breedMenu;  // BreedMenu
+    [SerializeField] private GameObject shopItemIllegal;
     [SerializeField] private List<GameObject> commonCats;
     [SerializeField] private List<GameObject> rareCats;
     [SerializeField] private List<GameObject> legendaryCats;
 
-
-    void Start()
-    {
-	    
-    }
-    
-    
-
-
+        
     public void SpawnACat()
     {
        float randomChance = Random.Range(0f, 1f);
@@ -68,6 +61,11 @@ public class Buttons : MonoBehaviour
     public void BreedButtonOff()
     {
 	breedMenu.SetActive(false);
+    }
+
+    public void IllegalButton()
+    {
+	shopItemIllegal.SetActive(true);
     }
 	
 }

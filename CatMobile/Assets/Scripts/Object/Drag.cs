@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Drag : MonoBehaviour
 {
-    private bool isDragging = false;
+    public bool isDragging = false;
     private Vector3 offset;
     [SerializeField] GameObject Rare;
     
@@ -17,7 +17,6 @@ public class Drag : MonoBehaviour
     void OnMouseUp()
     {
         isDragging = false;
-
 	
     }
 

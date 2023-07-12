@@ -7,13 +7,13 @@ public class CashMoney : MonoBehaviour
 {
 	[SerializeField] TextMeshProUGUI textMeshPro;
 
-	int goldIncome = 2;
+	int goldIncome = 0;
 
 	public int GoldIncome{
 		
 		get { return goldIncome; }
 		set { goldIncome = value;
-	        UpdateText();}
+	        Updatetext();}
 	}
 
 
@@ -28,7 +28,7 @@ public class CashMoney : MonoBehaviour
     {
 
 	    StartCoroutine(GoldIncrease());
-	    Debug.Log(GoldIncome);
+	    Debug.Log(GoldIncome.value);
    
     }
 
@@ -36,7 +36,7 @@ public class CashMoney : MonoBehaviour
     {
 	    while (true) 
 	    {
-		    DataHandler.Instance.Cash += GoldIncome;
+		    DataHandler.Instance.Cash += goldIncrease;
 		    UpdateText();
 		    yield return new WaitForSeconds(1f);
 
