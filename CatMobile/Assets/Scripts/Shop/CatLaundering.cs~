@@ -16,7 +16,6 @@ public class CatLaundering : MonoBehaviour
 		{
 
 			button.interactable = true;
-		}
 
 	}
 
