@@ -1,21 +1,21 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class CatLaundering : MonoBehaviour
 {
-	private Button button;
+	[SerializeField] Button button;
 
-	public void Start() 
+	public void update() 
 	{
 
-	        Button = gameObject.GetComponent<Button>;
-
-
-		if (DataHandler.Instance.Cash >= 50)
+		if (DataHandler.Instance.Cash >= 10)
 		{
 
 			button.interactable = true;
+
+		}
 
 	}
 
