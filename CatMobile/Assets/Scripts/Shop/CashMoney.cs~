@@ -22,7 +22,7 @@ public class CashMoney : MonoBehaviour
     void Start()
     {
 	    StartCoroutine(GoldIncrease());
-	    textMeshPro.SetText("Cash " + DataHandler.Instance.Cash);
+	    textMeshPro.SetText("Filips Cash " + DataHandler.Instance.Cash);
 	    
     }
     
@@ -47,7 +47,7 @@ public class CashMoney : MonoBehaviour
 	    
     void UpdateText()
     {
-	    textMeshPro.SetText("Cash " + DataHandler.Instance.Cash);
+	    textMeshPro.SetText("Filips Cash " + DataHandler.Instance.Cash);
     }
 
     public void MoneyLaundering()

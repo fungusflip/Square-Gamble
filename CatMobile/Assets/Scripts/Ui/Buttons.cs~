@@ -8,12 +8,24 @@ public class Buttons : MonoBehaviour
     [SerializeField] private Transform spawnPoint; // Position for CatSpawning
     [SerializeField] private GameObject breedMenu;  // BreedMenu
     [SerializeField] private GameObject shopItemIllegal;
-    [SerializeField] private GameObject Button;
     [SerializeField] private List<GameObject> commonCats;
     [SerializeField] private List<GameObject> rareCats;
     [SerializeField] private List<GameObject> legendaryCats;
 
+
+    void Update()
+    { 
+	    if(Input.GetKeyDown(KeyCode.Escape))
+	    {
+		    SceneManager.LoadScene(0);
+		    Debug.Log("Scene changed to 0.");
+	    }
+
+    }
+
+
         
+
     public void SpawnACat()
     {
        float randomChance = Random.Range(0f, 1f);

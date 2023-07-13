@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Buttons : MonoBehaviour
 {
@@ -12,7 +13,20 @@ public class Buttons : MonoBehaviour
     [SerializeField] private List<GameObject> rareCats;
     [SerializeField] private List<GameObject> legendaryCats;
 
+
+    void Update()
+    { 
+	    if(Input.GetKeyDown(KeyCode.Escape))
+	    {
+		    SceneManager.LoadScene(0);
+		    Debug.Log("Scene changed to 0.");
+	    }
+
+    }
+
+
         
+
     public void SpawnACat()
     {
        float randomChance = Random.Range(0f, 1f);
