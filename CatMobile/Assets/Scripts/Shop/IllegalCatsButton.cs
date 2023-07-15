@@ -6,16 +6,11 @@ using UnityEngine.UI;
 public class IllegalCatsButton: MonoBehaviour
 {
 	[SerializeField] Button button;
-        [SerializeField] private CashMoney cashMoney;
 
-	private void Start()
+	public void Update() 
 	{
-		cashMoney = GetComponent<CashMoney>();
-	}
-	private void Update() 
-	{
-		int cash = cashMoney.cash;
-		if (cash >= 10)
+
+		if (DataHandler.Instance.Cash >= 10)
 		{
 
 			button.interactable = true;

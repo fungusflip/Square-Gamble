@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class Buttons : MonoBehaviour
 {
@@ -9,7 +8,6 @@ public class Buttons : MonoBehaviour
     [SerializeField] private Transform spawnPoint; // Position for CatSpawning
     [SerializeField] private GameObject breedMenu;  // BreedMenu
     [SerializeField] private GameObject shopItemIllegal;
-    [SerializeField] private GameObject catEnclopedia;
     [SerializeField] private List<GameObject> commonCats;
     [SerializeField] private List<GameObject> rareCats;
     [SerializeField] private List<GameObject> legendaryCats;
@@ -82,17 +80,5 @@ public class Buttons : MonoBehaviour
     {
 	shopItemIllegal.SetActive(true);
     }
-
-    public void catEnclopediaButton()
-    {
-	    catEnclopedia.SetActive(true);
-    }
-
-      public void catEnclopediaButtonOff()
-    {
-	    catEnclopedia.SetActive(false);
-    }
-
-	
 	
 }

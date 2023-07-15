@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class DataHandler : MonoBehaviour
 {
-    private static DataHandler instance;
+    public static DataHandler instance;
     public int CommonCats { get; set;}
     public int RareCats { get; set;}
     public int LegendaryCats { get; set;}
