@@ -1,10 +1,55 @@
 using UnityEngine;
+using System.IO;
+using Newtonsoft.Json;
 
-
-public class LoadAndSave : MonoBehaviour
+public class LoadandSave : MonoBehaviour
 {
-	public void SaveData()
-	{
-	
+    public static GameManager Instance;
 
-	}
+    private string savePath;
+
+    public GameState CurrentGameState { get; private set; }
+
+    private void Awake()
+    {
+        if (Instance == null)
+        {
+            Instance = this;
+            DontDestroyOnLoad(gameObject);
+
+            savePath = Path.Combine(Application.persistentDataPath, "gamestate.json");
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
+
+    public void SaveGameState()
+    {
+        // Create a JSON string from the game state
+        string json = JsonConvert.SerializeObject(CurrentGameState);
+
+        // Write the JSON string to a file
+        File.WriteAllText(savePath, json);
+    }
+
+    public void LoadGameState()
+    {
+        if (File.Exists(savePath))
+        {
+            // Read the JSON string from the file
+            string json = File.ReadAllText(savePath);
+
+            // Deserialize the JSON string to a GameState object
+            CurrentGameState = JsonConvert.DeserializeObject<GameState>(json);
+        }
+        else
+        {
+            // If the save file doesn't exist, create a new game state
+            CurrentGameState = new GameState();
+        }
+    }
+}
+	
+}

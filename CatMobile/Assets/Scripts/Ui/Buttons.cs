@@ -9,6 +9,7 @@ public class Buttons : MonoBehaviour
     [SerializeField] private Transform spawnPoint; // Position for CatSpawning
     [SerializeField] private GameObject breedMenu;  // BreedMenu
     [SerializeField] private GameObject shopItemIllegal;
+    [SerializeField] private GameObject catEnclopedia;
     [SerializeField] private List<GameObject> commonCats;
     [SerializeField] private List<GameObject> rareCats;
     [SerializeField] private List<GameObject> legendaryCats;
@@ -45,22 +46,19 @@ public class Buttons : MonoBehaviour
        if (randomChance > 0.0f && randomChance < 0.5f)
        {
          GameObject spawnedCat = Instantiate(objectRandomCommon, spawnPoint.position, spawnPoint.rotation);
-         DataHandler.Instance.CommonCats++;
-        
         }
 
-        
+      
+
         if (randomChance > 0.5f && randomChance < 0.8f)
       {
         GameObject spawnedCat = Instantiate(objectRandomRare, spawnPoint.position, spawnPoint.rotation);
-        DataHandler.Instance.RareCats++;
       }
+
         
         if (randomChance > 0.8f && randomChance < 0.9f)
       {
         GameObject spawnedCat = Instantiate(objectRandomlegendary, spawnPoint.position, spawnPoint.rotation);
-        DataHandler.Instance.LegendaryCats++;
-	Debug.Log(DataHandler.Instance.LegendaryCats);
       }
        
     }
@@ -81,5 +79,17 @@ public class Buttons : MonoBehaviour
     {
 	shopItemIllegal.SetActive(true);
     }
+
+    public void catEnclopediaButton()
+    {
+	    catEnclopedia.SetActive(true);
+    }
+
+      public void catEnclopediaButtonOff()
+    {
+	    catEnclopedia.SetActive(false);
+    }
+
+	
 	
 }

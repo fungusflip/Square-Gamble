@@ -1,0 +1,15 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+[System.Serializable]
+public class GameData
+{
+    	
+    public int cash;	
+   
+    public GameData()
+    {
+       this.cash = 0; 
+    }
+}

@@ -16,7 +16,7 @@ public class DataHandler : MonoBehaviour
 
     public void NewGame()
     {
-        this.gameData = new GameData(); // Corrected syntax
+        this.gameData = new GameData(); 
     }
 
     public void Save()
@@ -32,6 +32,7 @@ public class DataHandler : MonoBehaviour
 
         if (this.gameData == null)
         {
+		Debug.Log("Penis");
             NewGame();
         }
     }
