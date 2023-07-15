@@ -3,12 +3,13 @@ using TMPro;
 using System.Collections;
 using System.Collections.Generic;
 
-public class CashMoney : MonoBehaviour
+public class CashMoney : MonoBehaviour, IDataPersistence
 {
 	[SerializeField] TextMeshProUGUI textMeshPro;
 	[SerializeField] GameObject houseObject;
 
 	int goldIncome = 2;
+	public int cash{get; private set;}
 
 	public int GoldIncome{
 		
@@ -18,25 +19,20 @@ public class CashMoney : MonoBehaviour
 	}
 
 
-    // Start is called before the first frame update
+    // Start is called before the first frame update:
     void Start()
     {
 	    StartCoroutine(GoldIncrease());
-	    textMeshPro.SetText("Filips Cash " + DataHandler.Instance.Cash);
+	    textMeshPro.SetText("Filips Cash " + cash);
 	    
     }
     
-    void update()
-    {
-	    Debug.Log(GoldIncome);
-   
-    }
 
     IEnumerator GoldIncrease()
     {
 	    while (true) 
 	    {
-		    DataHandler.Instance.Cash += GoldIncome;
+		    cash += GoldIncome;
 		    UpdateText();
 		    yield return new WaitForSeconds(1f);
 
@@ -47,7 +43,7 @@ public class CashMoney : MonoBehaviour
 	    
     void UpdateText()
     {
-	    textMeshPro.SetText("Filips Cash " + DataHandler.Instance.Cash);
+	    textMeshPro.SetText("Filips Cash " + cash);
     }
 
     public void MoneyLaundering()
@@ -58,5 +54,16 @@ public class CashMoney : MonoBehaviour
 	    }
 
     }
+
+    public void LoadData(GameData data)
+    {
+	    this.cash = data.cash;
+    }
+
+    public void SaveData(ref GameData data)
+    {
+	    data.cash = this.cash;
+    }
+	    
 
 }
