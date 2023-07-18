@@ -4,17 +4,13 @@ using UnityEngine;
 
 public class IllegalCatHous : MonoBehaviour
 {
-	[SerializeField] BoxCollider2D collider;
-
-    // Start is called before the first frame update
+    //cool Collider moment
     private void OnTriggerStay2D(Collider2D other)
     {
 	   Drag otherObject = other.GetComponent<Drag>();
-	   if (otherObject.dropped == true && other.gameObject.CompareTag("Common"))
+	   if (otherObject.dropped == true && other.gameObject.CompareTag("Cat"))
 	   {
 		   Debug.Log("IT WORKED");
-
-
 	   }
 		  
 

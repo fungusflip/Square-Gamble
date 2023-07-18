@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: -652195201484793342}
   m_Layer: 0
   m_Name: CatRare1
-  m_TagString: Rare
+  m_TagString: Cat
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -137,9 +137,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bfc8957fb07d4524db3267dd112ef0d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Common: {fileID: 2065652411395771461, guid: 46fe850be1e87a3479a9ae1b8ce521e2, type: 3}
+  isDragging: 0
+  dropped: 0
   Rare: {fileID: 1279657704594393787}
-  Legendary: {fileID: 3319877578642603050, guid: 78e4b669ef487395093f70b83c645301, type: 3}
+  collider: {fileID: 0}
 --- !u!58 &-652195201484793342
 CircleCollider2D:
   m_ObjectHideFlags: 0

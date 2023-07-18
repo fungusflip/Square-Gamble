@@ -7,8 +7,6 @@ public class Drag : MonoBehaviour
     public bool isDragging = false;
     private Vector3 offset;
     public bool dropped;
-    [SerializeField] GameObject Rare;
-    [SerializeField] BoxCollider2D collider;
 
     void OnMouseDown()
     {

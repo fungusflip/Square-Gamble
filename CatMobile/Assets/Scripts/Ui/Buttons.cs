@@ -25,9 +25,6 @@ public class Buttons : MonoBehaviour
 
     }
 
-
-        
-
     public void SpawnACat()
     {
        float randomChance = Random.Range(0f, 1f);
@@ -64,20 +61,21 @@ public class Buttons : MonoBehaviour
     }
 
     public void BreedButtonActive()
-    {
-        
-        breedMenu.SetActive(true);
-
+    { 
+      breedMenu.SetActive(true);
     }
 
     public void BreedButtonOff()
     {
-	breedMenu.SetActive(false);
-    }
+	    breedMenu.SetActive(false);
 
+    }
+     
+     //Todo 
     public void IllegalButton()
     {
-	shopItemIllegal.SetActive(true);
+	    shopItemIllegal.SetActive(true);
+       //Todo add level upp functionality to make a check in money scriptus to increase income
     }
 
     public void catEnclopediaButton()

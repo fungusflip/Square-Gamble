@@ -2,22 +2,26 @@ using UnityEngine;
 
 public class Movement : MonoBehaviour
 {
-    [SerializeField] Rigidbody2D rg;
-    [SerializeField] Transform myTransform;
+    private Rigidbody2D rg;
+    private Transform myTransform;
     Camera mainCamera;
     Vector2 screenBounds;
-    [SerializeField] float movementSpeed = 1000f;
+    [SerializeField] float movementSpeed = 10f;
 
-    [SerializeField] float walkProbability = 0.0001f;
+    [SerializeField] float walkProbability = 0.000001f;
 
     void Start()
     {
-        rg = GetComponent<Rigidbody2D>();
+        rg = this.GetComponent<Rigidbody2D>();
         mainCamera = Camera.main;
+        myTransform = this.GetComponent<Transform>();
         screenBounds = GetScreenBounds();
+        Vector2 randomDirection = Random.insideUnitCircle.normalized;
+        Vector2 velocity = randomDirection * movementSpeed * Time.deltaTime;
+        rg.velocity = velocity;
     }
 
-    void Update()
+    void FixedUpdate()
     {
         ClampPosition();
 

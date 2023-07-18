@@ -18,8 +18,6 @@ public class CashMoney : MonoBehaviour, IDataPersistence
 	        UpdateText();}
 	}
 
-
-    // Start is called before the first frame update:
     void Start()
     {
 	    StartCoroutine(GoldIncrease());
