@@ -7,6 +7,8 @@ public class GameData
 {
     	
     public int cash;	
+    public bool illegalHouse;
+    public int illegalHouseLevel;
    
    //the values define in this constructer will be the default values
    // the game starts with no data to Load
@@ -16,5 +18,7 @@ public class GameData
     public GameData()
     {
        this.cash = 0; 
+       this.illegalHouse = false;
+       this.illegalHouseLevel = 0;
     }
 }

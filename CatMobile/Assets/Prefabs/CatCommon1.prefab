@@ -121,8 +121,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0aa51362453534c599b3a9e2edef96ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rg: {fileID: 7224229152766296046}
-  myTransform: {fileID: 1501994765165284315}
   movementSpeed: 50
   walkProbability: 0.01
 --- !u!114 &758753445390548460
@@ -139,8 +137,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isDragging: 0
   dropped: 0
-  Rare: {fileID: 1279657704594393787, guid: 4eaa8b9ed34a6b0508d97a7517c17746, type: 3}
-  collider: {fileID: 0}
 --- !u!58 &1434824718315240919
 CircleCollider2D:
   m_ObjectHideFlags: 0

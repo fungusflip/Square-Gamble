@@ -1,12 +1,11 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+using UnityEngine;	
 using UnityEngine.UI;
-
-public class IllegalCatsButton: MonoBehaviour
+    
+    public class IllegalCatsButton : MonoBehaviour
 {
-	[SerializeField] Button button;
-        [SerializeField] private CashMoney cashMoney;
+    [SerializeField] Button button;
+    [SerializeField] private CashMoney cashMoney;
+	[SerializeField] private HouseManager houseManager;
 
 	private void Start()
 	{
@@ -15,15 +14,11 @@ public class IllegalCatsButton: MonoBehaviour
 	private void Update() 
 	{
 		int cash = cashMoney.cash;
-		if (cash >= 10)
+		if (HouseManager.Instance.illegalLevel == 0 && cash >= 400)
 		{
-
-			button.interactable = true;
-
-		}
+            button.interactable = true;
+            //Todo fix level acces and different effects for different levels
+        }
 
 	}
-
-
-
 }

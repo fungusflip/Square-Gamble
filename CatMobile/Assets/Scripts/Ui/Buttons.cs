@@ -13,7 +13,8 @@ public class Buttons : MonoBehaviour
     [SerializeField] private List<GameObject> commonCats;
     [SerializeField] private List<GameObject> rareCats;
     [SerializeField] private List<GameObject> legendaryCats;
-
+    [SerializeField] private CashMoney cashMoney;
+    
 
     void Update()
     { 
@@ -28,21 +29,21 @@ public class Buttons : MonoBehaviour
     public void SpawnACat()
     {
        float randomChance = Random.Range(0f, 1f);
-       int commonCatsNumber = commonCats.Count;
-       int rareCatsNumber = rareCats.Count;
-       int legendaryCatsNumber = legendaryCats.Count;
-       int commonCatsRandom = Random.Range(0, commonCatsNumber);
-       int rareCatsRandom = Random.Range(0, rareCatsNumber);
-       int legendaryCatsRandom = Random.Range(0, legendaryCatsNumber);
+       int commonCatsRandom = Random.Range(0, commonCats.Count);
+       int rareCatsRandom = Random.Range(0, rareCats.Count);
+       int legendaryCatsRandom = Random.Range(0, legendaryCats.Count);
 
        GameObject objectRandomCommon = commonCats[commonCatsRandom];
        GameObject objectRandomRare = rareCats[rareCatsRandom];
        GameObject objectRandomlegendary = legendaryCats[legendaryCatsRandom];
 
+
        
        if (randomChance > 0.0f && randomChance < 0.5f)
        {
+        
          GameObject spawnedCat = Instantiate(objectRandomCommon, spawnPoint.position, spawnPoint.rotation);
+
         }
 
       
@@ -74,8 +75,10 @@ public class Buttons : MonoBehaviour
      //Todo 
     public void IllegalButton()
     {
+      //fix cash difference for level
 	    shopItemIllegal.SetActive(true);
-       //Todo add level upp functionality to make a check in money scriptus to increase income
+      cashMoney.MoneyLaundering();
+      cashMoney.cash -= 400;
     }
 
     public void catEnclopediaButton()

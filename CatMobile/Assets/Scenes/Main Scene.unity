@@ -436,8 +436,8 @@ GameObject:
   - component: {fileID: 302972773}
   - component: {fileID: 302972772}
   - component: {fileID: 302972776}
-  - component: {fileID: 302972777}
-  - component: {fileID: 302972778}
+  - component: {fileID: 302972779}
+  - component: {fileID: 302972780}
   m_Layer: 0
   m_Name: Main Game
   m_TagString: Untagged
@@ -468,6 +468,7 @@ MonoBehaviour:
   - {fileID: 1279657704594393787, guid: 4eaa8b9ed34a6b0508d97a7517c17746, type: 3}
   legendaryCats:
   - {fileID: 3319877578642603050, guid: 78e4b669ef487395093f70b83c645301, type: 3}
+  cashMoney: {fileID: 302972779}
 --- !u!4 &302972773
 Transform:
   m_ObjectHideFlags: 0
@@ -497,7 +498,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c46a8bec714a324b99edf69dd0efadb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &302972777
+--- !u!114 &302972779
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -511,7 +512,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textMeshPro: {fileID: 51653888}
   houseObject: {fileID: 546202907}
---- !u!114 &302972778
+  cash: 0
+--- !u!114 &302972780
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -524,7 +526,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   button: {fileID: 1787620343}
-  cashMoney: {fileID: 0}
+  cashMoney: {fileID: 302972779}
 --- !u!1 &309892460
 GameObject:
   m_ObjectHideFlags: 0
@@ -1450,6 +1452,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9515e90a09adcd24bafde6df733d833e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cashmoney: {fileID: 302972779}
 --- !u!1 &629960045
 GameObject:
   m_ObjectHideFlags: 0
