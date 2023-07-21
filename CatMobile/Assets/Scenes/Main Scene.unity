@@ -437,7 +437,6 @@ GameObject:
   - component: {fileID: 302972772}
   - component: {fileID: 302972776}
   - component: {fileID: 302972779}
-  - component: {fileID: 302972780}
   m_Layer: 0
   m_Name: Main Game
   m_TagString: Untagged
@@ -512,21 +511,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textMeshPro: {fileID: 51653888}
   houseObject: {fileID: 546202907}
+  cost: 400
   cash: 0
---- !u!114 &302972780
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 302972771}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ef485008294bb8d45b9b90ccf92a5b6a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  button: {fileID: 1787620343}
-  cashMoney: {fileID: 302972779}
 --- !u!1 &309892460
 GameObject:
   m_ObjectHideFlags: 0
@@ -1229,7 +1215,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Cost: 10 CASH'
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1748,7 +1734,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Launder Money for illegal cat selling! +10% Passiv Cash
+  m_text: "Launder Money for illegal cat selling! \n25 Gold per level"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2034,6 +2020,7 @@ GameObject:
   - component: {fileID: 850706492}
   - component: {fileID: 850706494}
   - component: {fileID: 850706493}
+  - component: {fileID: 850706495}
   m_Layer: 5
   m_Name: ShopMenu
   m_TagString: Untagged
@@ -2101,6 +2088,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 850706491}
   m_CullTransparentMesh: 1
+--- !u!114 &850706495
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 850706491}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef485008294bb8d45b9b90ccf92a5b6a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  button: {fileID: 1787620343}
+  cashMoney: {fileID: 302972779}
+  tm: {fileID: 535075060}
 --- !u!1 &931609913
 GameObject:
   m_ObjectHideFlags: 0
@@ -2308,7 +2310,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 302972772}
         m_TargetAssemblyTypeName: Buttons, Assembly-CSharp
-        m_MethodName: BreedButtonOff
+        m_MethodName: ShopButtonOff
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4074,23 +4076,11 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 302972772}
         m_TargetAssemblyTypeName: Buttons, Assembly-CSharp
-        m_MethodName: BreedButtonActive
+        m_MethodName: ShopButtonActive
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 302972771}
-        m_TargetAssemblyTypeName: Buttons, Assembly-CSharp
-        m_MethodName: 
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 

@@ -61,12 +61,12 @@ public class Buttons : MonoBehaviour
        
     }
 
-    public void BreedButtonActive()
+    public void ShopButtonActive()
     { 
       breedMenu.SetActive(true);
     }
 
-    public void BreedButtonOff()
+    public void ShopButtonOff()
     {
 	    breedMenu.SetActive(false);
 
@@ -78,7 +78,8 @@ public class Buttons : MonoBehaviour
       //fix cash difference for level
 	    shopItemIllegal.SetActive(true);
       cashMoney.MoneyLaundering();
-      cashMoney.cash -= 400;
+      cashMoney.cost += 400;
+			cashMoney.cash -= cashMoney.cost;
     }
 
     public void catEnclopediaButton()

@@ -12,13 +12,8 @@ public class CashMoney : MonoBehaviour, IDataPersistence
 
 	int goldIncome = 1;
 	int goldIncrease = 0;
+	public int cost = 400;
 	public int cash;
-
-	public int GoldIncome{
-		
-		get { return goldIncome; }
-		set { goldIncome = value;}
-	}
 
     void Start()
     {
@@ -36,6 +31,7 @@ public class CashMoney : MonoBehaviour, IDataPersistence
 			int level = HouseManager.Instance.illegalLevel;
 			int cats = HouseManager.Instance.illegalCats;
 			goldIncrease = (2*cats+1)+(level*25);
+			
 	    }
 
     }
@@ -44,11 +40,9 @@ public class CashMoney : MonoBehaviour, IDataPersistence
     {
 	    while (true) 
 	    {
-		    cash += GoldIncome + goldIncrease;
+		    cash += goldIncome + goldIncrease;
 		    UpdateText();
 		    yield return new WaitForSeconds(1f);
-
-
 	    }
     }
 
