@@ -6,9 +6,9 @@ public class Movement : MonoBehaviour
     private Transform myTransform;
     Camera mainCamera;
     Vector2 screenBounds;
-    [SerializeField] float movementSpeed = 10f;
+    [SerializeField] float movementSpeed = 1f;
 
-    [SerializeField] float walkProbability = 0.000001f;
+    [SerializeField] float walkProbability = 1f;
 
     void Start()
     {

@@ -5,9 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class Buttons : MonoBehaviour
 {
-    [SerializeField] private GameObject prefabRed; // Right now what cat spawns
-    [SerializeField] private Transform spawnPoint; // Position for CatSpawning
-    [SerializeField] private GameObject breedMenu;  // BreedMenu
+    [SerializeField] private Transform spawnPoint; 
+    [SerializeField] private GameObject breedMenu;  
     [SerializeField] private GameObject shopItemIllegal;
     [SerializeField] private GameObject catEnclopedia;
     [SerializeField] private List<GameObject> commonCats;
@@ -75,11 +74,8 @@ public class Buttons : MonoBehaviour
      //Todo 
     public void IllegalButton()
     {
-      //fix cash difference for level
 	    shopItemIllegal.SetActive(true);
-      cashMoney.MoneyLaundering();
-      cashMoney.cost += 400;
-			cashMoney.cash -= cashMoney.cost;
+      cashMoney.MoneyLaunderingLevel();
     }
 
     public void catEnclopediaButton()

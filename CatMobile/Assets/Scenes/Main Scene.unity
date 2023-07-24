@@ -456,17 +456,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d9c6d3019bba5476bd265d0ea6a9a0d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefabRed: {fileID: 2065652411395771461, guid: 46fe850be1e87a3479a9ae1b8ce521e2, type: 3}
   spawnPoint: {fileID: 1678966832}
   breedMenu: {fileID: 850706491}
   shopItemIllegal: {fileID: 546202907}
   catEnclopedia: {fileID: 0}
   commonCats:
-  - {fileID: 2065652411395771461, guid: 46fe850be1e87a3479a9ae1b8ce521e2, type: 3}
+  - {fileID: 3978283534164330051, guid: 165119f05e8b0224bbf61c191b526a83, type: 3}
+  - {fileID: 5839249384476214940, guid: 4d9b6cf90d0c8b54bb01056963510056, type: 3}
   rareCats:
-  - {fileID: 1279657704594393787, guid: 4eaa8b9ed34a6b0508d97a7517c17746, type: 3}
+  - {fileID: 898679554398336087, guid: 477942771ba8b0949b2210fdc93b0774, type: 3}
+  - {fileID: 3959975645948565556, guid: b6a6ae03d03ae374abab8bd4f1a5e856, type: 3}
   legendaryCats:
-  - {fileID: 3319877578642603050, guid: 78e4b669ef487395093f70b83c645301, type: 3}
+  - {fileID: 6113881421359745183, guid: cb85baad62a7dca43979c5ab59a11241, type: 3}
+  - {fileID: 1432575869163345423, guid: edcda807abbd6bb4da9170a9cef22c84, type: 3}
   cashMoney: {fileID: 302972779}
 --- !u!4 &302972773
 Transform:
@@ -511,6 +513,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textMeshPro: {fileID: 51653888}
   houseObject: {fileID: 546202907}
+  goldIncrease: 0
   cost: 400
   cash: 0
 --- !u!1 &309892460
@@ -2237,7 +2240,7 @@ GameObject:
   - component: {fileID: 940106948}
   - component: {fileID: 940106947}
   m_Layer: 5
-  m_Name: BreedExit
+  m_Name: Exit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2579,7 +2582,7 @@ GameObject:
   - component: {fileID: 1188477135}
   - component: {fileID: 1188477134}
   m_Layer: 5
-  m_Name: Catpedia
+  m_Name: CatWorkerUi
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2790,7 +2793,7 @@ GameObject:
   - component: {fileID: 1245776201}
   - component: {fileID: 1245776200}
   m_Layer: 5
-  m_Name: BreedExit
+  m_Name: Exit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
