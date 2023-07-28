@@ -5,7 +5,7 @@ using TMPro;
 
 public class IllegalCatsButton : MonoBehaviour
 {
-    [SerializeField] Button button;
+    [SerializeField] Button houseButton;
     [SerializeField] private CashMoney cashMoney;
 	[SerializeField] private HouseManager houseManager;
 	[SerializeField] private TextMeshProUGUI tm;
@@ -16,11 +16,15 @@ public class IllegalCatsButton : MonoBehaviour
 		int cash = cashMoney.cash;
 		if (cash >= cost)
 		{
-            button.interactable = true;
+            houseButton.interactable = true;
             
         }
+		if(Input.GetKeyDown(KeyCode.Escape))
+        {
+            gameObject.SetActive(false);
+        }
 		if (HouseManager.Instance.illegalLevel >= 2)
-		{ button.interactable = false;
+		{ houseButton.interactable = false;
 		tm.text = "0";}
 
 		tm.text = "Cost:" + cost;

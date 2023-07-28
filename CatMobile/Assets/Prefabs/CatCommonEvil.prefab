@@ -124,6 +124,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   evil: 1
   good: 0
+  common: 1
+  rare: 0
+  legendary: 0
 --- !u!114 &993150288253078658
 MonoBehaviour:
   m_ObjectHideFlags: 0

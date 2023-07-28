@@ -57,10 +57,6 @@ public class CashMoney : MonoBehaviour, IDataPersistence
 	    }
 
     }
-	public void CatCheck()
-	{
-
-	}
     
     IEnumerator GoldIncrease()
     {

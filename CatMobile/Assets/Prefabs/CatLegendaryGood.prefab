@@ -168,3 +168,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   evil: 0
   good: 1
+  common: 0
+  rare: 0
+  legendary: 1
