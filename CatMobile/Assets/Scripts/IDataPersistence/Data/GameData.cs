@@ -15,6 +15,7 @@ public class GameData
     public int goodRareCat;
     public int evilLegendaryCat;
     public int goodLegendaryCat;
+    
    
     public GameData()
     {
