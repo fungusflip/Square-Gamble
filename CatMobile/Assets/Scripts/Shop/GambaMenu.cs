@@ -11,7 +11,7 @@ public class GambaMenu : MonoBehaviour
 
     void Update()
     {
-        if(cashMoney.cash >= 1400)
+        if(cashMoney.cash >= 100)
         {
             button.interactable = true;
         }   
